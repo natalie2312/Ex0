@@ -138,7 +138,7 @@ public class Test {
 		//add polynom
 		System.out.println("\nadd polynom Test\n");
 		p6.add(p1);
-		System.out.println(p6.toString());   //2.0-2.0x+10.0x^2-x^3
+		System.out.println(p6.toString());   //2.0-x+10.0x^2-x^3
 		p6.add(p3);
 		System.out.println(p6.toString()); // -2.0+13.0x^2-x^3
 		Monom mm= new Monom(2,0) ;
@@ -199,7 +199,7 @@ public class Test {
 		//derivative
 		System.out.println("\nderivative Test\n");
 		Polynom pa= new Polynom(po.derivative().toString());
-		System.out.println(pa.toString());          //-6.0x+3.0x^2+24.0x^3-10.0x^4
+		System.out.println(pa.toString());          //-3.0+2.0x
 		pa= new Polynom(pa.derivative().toString());
 		System.out.println(pa.toString());         //-6.0+6.0x+72.0x^2-40.0x^3
 		Polynom pb= new Polynom(pol.derivative().toString());
