@@ -7,7 +7,7 @@ import javax.management.RuntimeErrorException;
  * This class represents a simple "Monom" of shape a*x^b, where a is a real number and a is an integer (summed a none negative), 
  * see: https://en.wikipedia.org/wiki/Monomial 
  * The class implements function and support simple operations as: construction, value at x, derivative, add and multiply. 
- * @author Boaz
+ * @author natali and michal
  *
  */
 public class Monom implements function{

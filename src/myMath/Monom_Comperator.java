@@ -4,7 +4,6 @@ import java.util.Comparator;
 
 public class Monom_Comperator implements Comparator<Monom> {
 
-	// ******** add your code below *********
 
 	@Override
 	public int compare(Monom s1, Monom s2)

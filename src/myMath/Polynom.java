@@ -12,7 +12,7 @@ import myMath.Monom;
  * 2. Finding a numerical value between two values (currently support root only f(x)=0).
  * 3. Derivative
  * 
- * @author Boaz
+ * @author natali and michal
  *
  */
 public class Polynom implements Polynom_able{
@@ -42,6 +42,7 @@ public class Polynom implements Polynom_able{
 	 */
 	public Polynom (String p) {	
 		p= p.replaceAll("\\*", "");
+		p= p.replaceAll(" ", "");
 		pol= new ArrayList<Monom>();
 		if(p.length()==0)
 			throw new RuntimeException("ERR cant be empty");
