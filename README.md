@@ -16,5 +16,7 @@ the interfaces includ the functions:
 -isZero
 -root
 -area
+-areaUnder
 -copy
 -f
+We have added a class named "LinePlotTest" that allows you to draw the polynomial, where you can see the extreme points of the function.
