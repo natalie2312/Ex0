@@ -28,10 +28,10 @@ public class LinePlotTest extends JFrame {
 		double z= 0;              //A variable that will preserve the last local extreme point
 
 		//Move over the X points and find the extreme points and their Y values
-		for (double x = a; x <= b; x+=0.20) {
+		for (double x = a; x <= b; x+=0.12) {
 			double y = pp.f(x);
-			double xb= x-0.15;
-			double xa= x+0.15;
+			double xb= x-0.05;
+			double xa= x+0.05;
 			if(pp2.f(xb)*pp2.f(xa)<0) {        //We will check if there is an extreme point in the area
 				x= pp2.root(xb, xa, 0.1);
 				y= pp.f(x);
@@ -60,7 +60,7 @@ public class LinePlotTest extends JFrame {
 	public static void main(String[] args) {
 		Polynom pp= new Polynom("0.2x^4-1.5x^3+3.0x^2-x-5");
 		double a= -2;       //a  is the right point of the range
-		double b= 10;       // b is the left point of the range
+		double b= 6;       // b is the left point of the range
 		LinePlotTest frame = new LinePlotTest(pp,a,b);		
 		frame.setVisible(true);
 	}
