@@ -178,10 +178,10 @@ public class Polynom implements Polynom_able{
 		double left= Math.min(x0, x1);
 		double mid= (right+left)/2;
 		while(Math.abs(this.f(mid))>eps) {
-			if(this.f(mid)>0)
-				right= mid;
-			else
+			if(this.f(left)*this.f(mid)>0)
 				left= mid;
+			else
+				right= mid;
 			mid= (right+left)/2;
 		}
 		return mid;
@@ -251,6 +251,18 @@ public class Polynom implements Polynom_able{
 			ans= ans.substring(1, ans.length());
 		ans= ans.replaceAll("\\+-","\\-");
 		return ans;
+	}
+	
+	public double areaUnder(double x0, double x1, double eps) {
+		double sum=0;
+		double right= Math.max(x0, x1);
+		double left= Math.min(x0, x1);
+		while(left<right) {
+			left+= eps;
+			if(this.f(left)<0)
+				sum+= eps*Math.abs(this.f(left));
+		}
+		return sum;
 	}
 
 }
